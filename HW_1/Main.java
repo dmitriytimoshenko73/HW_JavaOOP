@@ -10,22 +10,22 @@ public class Main {
     
 }
 
-interface QueueBehaviour {
-    void enqueue(String person);
-    String dequeue();
-}
+// interface QueueBehaviour {
+//     void enqueue(String person);
+//     String dequeue();
+// }
 
-interface MarketBehaviour {
-    void addPerson(String person);
-    void removePerson(String person);
-}
+// interface MarketBehaviour {
+//     void addPerson(String person);
+//     void removePerson(String person);
+// }
 
  public class Market implements QueueBehaviour, MarketBehaviour {
     private Queue<String> queue;
 
-    public Market() {
-        this.queue = new LinkedList<>();
-    }
+    // public Market() {
+    //     this.queue = new LinkedList<>();
+    // }
 
     @Override
     public void enqueue(String person) {
