@@ -1,5 +1,5 @@
 package HW_2;
 
-public class УчебнаяГруппа {
+public class StudyGroup {
 
 }
