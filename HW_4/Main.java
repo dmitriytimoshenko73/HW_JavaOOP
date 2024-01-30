@@ -3,6 +3,8 @@ package HW_4;
 import java.time.LocalDate;
 
 import HW_4.controller.StudentController;
+import HW_4.service.TeacherService;
+import HW_4.view.TeacherView;
 
 /**
  * Создать класс УчительСервис и реализовать аналогично проделанному на семинаре
