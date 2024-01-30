@@ -3,6 +3,9 @@ package HW_4.view;
 import java.util.List;
 import java.util.logging.Logger;
 
+import HW_4.data.Student;
+import HW_4.data.StudentGroup;
+
 public class StudentView implements UserView<Student>{
 
     Logger logger = Logger.getLogger(StudentView.class.getName());
