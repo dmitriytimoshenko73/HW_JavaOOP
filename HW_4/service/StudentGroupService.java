@@ -6,6 +6,8 @@ import java.util.Iterator;
 import java.util.List;
 
 import HW_4.data.Student;
+import HW_4.data.StudentGroup;
+import HW_4.data.Teacher;
 import HW_4.data.UserComparator;
 
 public class StudentGroupService {

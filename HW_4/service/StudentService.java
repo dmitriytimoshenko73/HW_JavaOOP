@@ -4,6 +4,9 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
+import HW_4.data.Numerator;
+import HW_4.data.Student;
+
 public class StudentService implements UserService<Student> {
 
     private final List<Student> students;
