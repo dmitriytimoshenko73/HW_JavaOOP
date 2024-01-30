@@ -1,6 +1,5 @@
 package HW_5.model;
 
-package model;
 
 import java.util.List;
 
