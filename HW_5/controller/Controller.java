@@ -1,6 +1,5 @@
 package HW_5.controller;
 
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -15,7 +14,6 @@ public class Controller {
     private final HW_5.service.DataService dataService = new HW_5.service.DataService();
     private final HW_5.view.StudentView studentView = new HW_5.view.StudentView();
     private final HW_5.view.TeacherView teacherView = new HW_5.view.TeacherView();
-    private final HW_5.view.GroupView groupView = new HW_5.view.GroupView();
     private final HW_5.service.GroupService groupService = new HW_5.service.GroupService();
 
     public void createStudent(String firstName, String secondName, String lastName) {
@@ -40,19 +38,20 @@ public class Controller {
 
     public Integer getGroupNumber() {// присвоить номер группе
         int number;
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Введите номер группы");
-        number = scanner.nextInt();
+        try (Scanner scanner = new Scanner(System.in)) {
+            System.out.println("Введите номер группы");
+            number = scanner.nextInt();
+        }
         return number;
 
     }
 
     public User getGroupTeacher() { // назначить преподавателя группы
         int id;
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Введите ID педагога");
-        id = scanner.nextInt();
-
+        try (Scanner scanner = new Scanner(System.in)) {
+            System.out.println("Введите ID педагога");
+            id = scanner.nextInt();
+        }
         // scanner.close();
         return dataService.getUserById(Type.TEACHER, id);
 
@@ -89,7 +88,7 @@ public class Controller {
         User teacherGroup = getGroupTeacher();
         List<User> students = studentsInGroup();
         Group group = groupService.createGroup(numberGroup, teacherGroup, students);
-        groupView.printOnConsole(group);
+        Group.printOnConsole(group);
 
     }
 

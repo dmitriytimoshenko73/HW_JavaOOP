@@ -47,4 +47,9 @@ public class Group {
                 '}';
     }
 
+    public static void printOnConsole(Group group) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'printOnConsole'");
+    }
+
 }
