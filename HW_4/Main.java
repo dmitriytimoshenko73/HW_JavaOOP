@@ -1,43 +1,31 @@
-// Создать класс УчительСервис и реализовать аналогично проделанному на семинаре.
-// Создать класс УчительВью и реализовать аналогично проделанному на семинаре.
-// Создать класс УчительКонтроллер и реализовать возможность создания, редактирования конкретного учителя и 
-// отображения списка учителей, имеющихся в системе. 
-
 package HW_4;
 
-import java.util.ArrayList;
+import java.time.LocalDate;
 
-import java.util.Collections;
-
-import java.util.Iterator;
-
-import java.util.List;
-
-public static void main (String[] args) {
-
-    TeacherService teacherService = new TeacherService();{
-    // Добавление учителей в список 
-    teacherService.add(new Teacher("Иван Иванов", 10)); 
-    teacherService.add(new Teacher("Петр Петров", 5)); 
-    teacherService.add(new Teacher("Александр Сидоров", 20)); 
-    
-    // Вывод списка учителей по опыту работы 
-    teacherService.printTeachersByExperience();}
-}
-
-/*import java.util.ArrayList;
-
-import java.util.Collections;
-
-import java.util.Iterator;
-
-import java.util.List;
-
+/**
+ * Создать класс УчительСервис и реализовать аналогично проделанному на семинаре
+ * Создать класс УчительВью и реализовать аналогично проделанному на семинаре
+ */
 public class Main {
     public static void main(String[] args) {
-        iUserService<Teacher> userService = new TeacherService();
-        TeacherController<Teacher> teacherController = new TeacherController<>(userService);
-        // Далее можно использовать методы из iUserController
+        // test of StudentController
+        StudentController studentController = new StudentController();
+        studentController.create("Name1", "Family1",
+                "fff", LocalDate.of(2000, 10, 01));
+        studentController.create("Name2", "Family2",
+                "ggg", LocalDate.of(2004, 1, 10));
+        studentController.create("Name3", "Family3",
+                "hhh", LocalDate.of(2010, 3, 15));
+
+        // test of TeacherService
+        TeacherService teacherService = new TeacherService();
+        teacherService.create("Teacher1Name", "Teacher1Family",
+                "aaa", LocalDate.of(1983, 02, 10));
+        teacherService.create("Teacher2Name", "Teacher2Family",
+                "bbb", LocalDate.of(1977, 03, 11));
+
+        TeacherView teacherView = new TeacherView();
+        teacherView.sendOnConsole(teacherService.getAll());
     }
 }
     
