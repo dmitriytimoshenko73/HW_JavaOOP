@@ -2,14 +2,14 @@ package HW_5.service;
 
 import java.util.ArrayList;
 import java.util.List;
-import model.Type;
+import HW_5.model.Type;
 
-import model.Student;
-import model.Teacher;
-import model.User;
+import HW_5.model.Student;
+import HW_5.model.Teacher;
+import HW_5.model.User;
 
 public class DataService {
-    private List<User> userList = new ArrayList<>();
+    private List<HW_5.model.User> userList = new ArrayList<>();
 
     public void create(String firstName, String secondName, String lastName, Type type) {
         int id = getMaxID(type);
@@ -53,9 +53,9 @@ public class DataService {
         return resultList;
     }
 
-    public User getUserById(Type type, int id) { // реализован поиск user по id
+    public HW_5.model.User getUserById(Type type, int id) { // реализован поиск user по id
         boolean itsStudent = Type.STUDENT == type;
-        for (User user : userList) {
+        for (HW_5.model.User user : userList) {
             if (user instanceof Teacher && !itsStudent && ((Teacher) user).getTeacherID() == id) {
                 return user;
             }

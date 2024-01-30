@@ -5,16 +5,11 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-import HW_5.model.Student;
 import HW_5.model.Group;
+import HW_5.model.Student;
 import HW_5.model.Teacher;
 import HW_5.model.Type;
 import HW_5.model.User;
-import HW_5.service.DataService;
-import HW_5.service.GroupService;
-import HW_5.view.GroupView;
-import HW_5.view.StudentView;
-import HW_5.view.TeacherView;
 
 public class Controller {
     private final HW_5.service.DataService dataService = new HW_5.service.DataService();
@@ -66,22 +61,22 @@ public class Controller {
     public List<User> studentsInGroup() { // подбираем студентов в группу
 
         List<User> studentsGroup = new ArrayList<>();
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Введите ID студентов, закончите - введите 0");
+        try (Scanner scanner = new Scanner(System.in)) {
+            System.out.println("Введите ID студентов, закончите - введите 0");
 
-        while (true) {
+            while (true) {
 
-            int number = scanner.nextInt();
+                int number = scanner.nextInt();
 
-            studentsGroup.add(dataService.getUserById(Type.STUDENT, number));
+                studentsGroup.add(dataService.getUserById(Type.STUDENT, number));
 
-            if (number == 0) {
+                if (number == 0) {
 
-                break;
+                    break;
+                }
+
             }
-
         }
-
         return studentsGroup;
 
     }

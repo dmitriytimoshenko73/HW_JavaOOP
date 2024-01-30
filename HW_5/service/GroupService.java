@@ -2,17 +2,16 @@ package HW_5.service;
 
 import java.util.List;
 
-import model.Group;
-import model.User;
+import HW_5.model.Group;
 
 public class GroupService  {
 
     
 
-    public Group createGroup (int number, User teacher, List<User> students) {
+    public Group createGroup (int number, HW_5.model.User teacher, List<HW_5.model.User> students) {
 
 
-        return new Group(number,teacher,students);
+        return new HW_5.model.Group(number,teacher,students);
 
                
     }
