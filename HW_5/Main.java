@@ -1,13 +1,9 @@
 package HW_5;
 
-
-import controller.Controller;
-
-
 public class Main {
     public static void main(String[] args) {
 
-        Controller controller = new Controller();
+        HW_5.controller.Controller controller = new HW_5.controller.Controller();
         controller.createStudent("Анатолий", "Петрович", "Иванов");
         controller.createStudent("Аркадий", "Семенович", "Петров");
         controller.createStudent("Семен", "Олегович", "Сидоров");

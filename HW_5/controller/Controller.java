@@ -1,28 +1,27 @@
 package HW_5.controller;
 
-package controller;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-import model.Group;
-import model.Student;
-import model.Teacher;
-import model.Type;
-import model.User;
-import service.DataService;
-import service.GroupService;
-import view.GroupView;
-import view.StudentView;
-import view.TeacherView;
+import HW_5.model.Student;
+import HW_5.model.Group;
+import HW_5.model.Teacher;
+import HW_5.model.Type;
+import HW_5.model.User;
+import HW_5.service.DataService;
+import HW_5.service.GroupService;
+import HW_5.view.GroupView;
+import HW_5.view.StudentView;
+import HW_5.view.TeacherView;
 
 public class Controller {
-    private final DataService dataService = new DataService();
-    private final StudentView studentView = new StudentView();
-    private final TeacherView teacherView = new TeacherView();
-    private final GroupView groupView = new GroupView();
-    private final GroupService groupService = new GroupService();
+    private final HW_5.service.DataService dataService = new HW_5.service.DataService();
+    private final HW_5.view.StudentView studentView = new HW_5.view.StudentView();
+    private final HW_5.view.TeacherView teacherView = new HW_5.view.TeacherView();
+    private final HW_5.view.GroupView groupView = new HW_5.view.GroupView();
+    private final HW_5.service.GroupService groupService = new HW_5.service.GroupService();
 
     public void createStudent(String firstName, String secondName, String lastName) {
         dataService.create(firstName, secondName, lastName, Type.STUDENT);
