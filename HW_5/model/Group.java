@@ -46,10 +46,11 @@ public class Group {
                 ", students:" + students +
                 '}';
     }
+}    
 
-    public static void printOnConsole(Group group) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'printOnConsole'");
-    }
+//     public static void printOnConsole(Group group) {
+//         // TODO Auto-generated method stub
+//         throw new UnsupportedOperationException("Unimplemented method 'printOnConsole'");
+//     }
 
-}
+// }
