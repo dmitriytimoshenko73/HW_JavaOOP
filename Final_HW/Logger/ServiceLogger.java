@@ -3,8 +3,6 @@ package Final_HW.Logger;
 
 import java.time.LocalDateTime;
 
-import Number.ComplexNumber;
-
 public class ServiceLogger implements Logger {
 
     private Logger logger;
@@ -18,7 +16,7 @@ public class ServiceLogger implements Logger {
         logger.logger(text);
     }
 
-    private void logOperation(String operation, ComplexNumber arg1, ComplexNumber arg2, ComplexNumber result) {
+    private void logOperation(String operation, ComplexNumber arg1, Final_HW.Number.ComplexNumber arg2, ComplexNumber result) {
 
         String text = LocalDateTime.now() + " число (" + arg1 + ")" + " операция: " + operation + " число (" + arg2
                 + ") = ";
