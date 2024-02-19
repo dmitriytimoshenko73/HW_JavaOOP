@@ -3,6 +3,8 @@ package Final_HW.Logger;
 
 import java.time.LocalDateTime;
 
+import Final_HW.Number.ComplexNumber;
+
 public class ServiceLogger implements Logger {
 
     private Logger logger;

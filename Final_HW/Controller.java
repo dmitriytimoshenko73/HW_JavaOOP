@@ -1,9 +1,9 @@
 package Final_HW;
 
-import Logger.PrintLogger;
-import Logger.ServiceLogger;
-import Number.ComplexNumber;
-import Number.ComplexNumberReader;
+import Final_HW.Logger.PrintLogger;
+import Final_HW.Logger.ServiceLogger;
+import Final_HW.Number.ComplexNumber;
+import Final_HW.Number.ComplexNumberReader;
 
 public class Controller {
 
